@@ -3,7 +3,6 @@ package com.example.lab2.ui.activities
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -54,7 +53,7 @@ class MainActivity : AppCompatActivity() {
                         outputLabel.text = if (ans != null) "$ans*${ans+1}*${ans+2} = $f = $n!" else "Cannot"
 
                     } catch (ex: NumberFormatException) {
-                        outputLabel.text = "It is not a number"
+                        outputLabel.text = getString(R.string.not_number_ex_text)
                     } catch (ex: Exception) {
                         outputLabel.text = ex.message
                     }
